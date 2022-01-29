@@ -1,0 +1,15 @@
+<hello name="{{ name }}"></hello>
+<p>Test</p>
+Search:<input type="text" [(ngModel)]="filter" (change)="applyFiler(filter)" />
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+  <tr *ngFor="let user of userList">
+    <td>{{ user.id }}</td>
+    <td>{{ user.title }}</td>
+    <td>{{ user.body }}</td>
+  </tr>
+</table>
